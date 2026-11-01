@@ -1,11 +1,12 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-const url = import.meta.env.https://mizrchqjvxhrgwbydmvd.supabase.co
-const key = import.meta.env.sb_publishable_lKiTVwsJgLX8uBckUT6YLQ_bfa2wb30
+const url = import.meta.env.VITE_SUPABASE_URL
+const key = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const isSupabaseConfigured = Boolean(
-  url && key &&
+  url &&
+  key &&
   !url.includes('YOUR_PROJECT_ID') &&
   !key.includes('your_supabase')
 )
